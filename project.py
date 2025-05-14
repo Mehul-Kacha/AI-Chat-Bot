@@ -1,12 +1,14 @@
 import webbrowser
 import time
 import pyautogui
+import pyperclip
+
 
 # Open WhatsApp Web
 webbrowser.open("https://web.whatsapp.com/")
 time.sleep(15)  # Wait for WhatsApp Web to load, adjust if needed
 
-# Click on search bar - you may need to get exact coordinates with pyautogui.position()
+# Click on search bar - you may need to get exact coordinates with courser.position()
 # Example: Click top-left where the search bar is
 pyautogui.click(x=219, y=260)
 time.sleep(1)
@@ -19,7 +21,6 @@ time.sleep(1)
 pyautogui.press("enter")
 
 # Select chat and copy
-import pyperclip
 
 # Wait for you to manually open the chat or automate before this
 time.sleep(2)
@@ -27,11 +28,12 @@ time.sleep(2)
 pyautogui.click(x=1848, y=868)
 
 # Step 1: Move to the start of the number (adjust coordinates for your screen)
-pyautogui.moveTo(919, 236)  # Replace with position near "919236"
+# Note: Please change this coordinates according to your position 
+pyautogui.moveTo(919, 236)  # Replace with position near "919,236"
 pyautogui.mouseDown()
 time.sleep(0.5)
 
-# Step 2: Drag to end of number (adjust to end of "919893")
+# Step 2: Drag to end of number (adjust to end of "919,893")
 pyautogui.moveTo(903, 994)  # Drag to the right
 pyautogui.mouseUp()
 time.sleep(0.5)
@@ -44,6 +46,7 @@ time.sleep(0.5)
 # Step 4: Get copied text
 copied_text = pyperclip.paste()
 
+# Step 5: Past this copied_text to your openAI API input content 
 from openai import OpenAI
 
 client = OpenAI("Your API Key")
@@ -62,7 +65,7 @@ output= f"content='{completion.choices[0].message.content}'"
 
 AI = output.split(":", 2)[-1].strip().rstrip("'")
 
-
+# Step 6: Copy output from openAI and then pasr it into WhatsApp reply and press enter to send reply
 pyperclip.copy(AI)
 time.sleep(5)
 pyautogui.click(x=1332, y=956)
