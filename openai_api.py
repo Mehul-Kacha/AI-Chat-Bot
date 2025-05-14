@@ -1,3 +1,4 @@
+# Will use openAI for our chat response 
 from openai import OpenAI
 
 client = OpenAI("Your API Key")
