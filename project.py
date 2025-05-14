@@ -14,7 +14,7 @@ pyautogui.click(x=219, y=260)
 time.sleep(1)
 
 # Type the contact name
-pyautogui.write("Ritu", interval=0.1)
+pyautogui.write("Type Name", interval=0.1)
 time.sleep(1)
 
 # Press enter to open the chat
