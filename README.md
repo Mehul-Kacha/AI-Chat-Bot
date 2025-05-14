@@ -22,10 +22,10 @@ Python 3.x
 Chrome or any default browser
 
 Required Python libraries:
-
+```
 pip install pyautogui pyperclip openai
 
-
+```
 Setup
 
 1. Replace "Your API Key" in the script with your actual OpenAI API key.
