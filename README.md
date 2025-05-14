@@ -6,7 +6,7 @@ Features
 
 Automatically opens WhatsApp Web
 
-Searches for a specific contact (Ritu)
+Searches for a specific contact (Name)
 
 Selects the latest chat message
 
