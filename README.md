@@ -46,7 +46,7 @@ How It Works
 2. Waits for the page to load and clicks the search bar.
 
 
-3. Searches and opens the chat with Ritu.
+3. Searches and opens the chat with (Name).
 
 
 4. Selects the latest message.
